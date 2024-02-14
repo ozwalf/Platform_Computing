@@ -19,7 +19,7 @@ The following **bonus** features are implemented:
 
 - [x] Applies different font(s). (0.5 pt)
 - [x] Applies border and margins. (0.5 pt)
-- [ ] DESCRIBE ANY OTHER FEATURES HERE.
+- [x] (DESCRIBE ANY OTHER FEATURES HERE.) COOL GITHUB BUTTON
 
 ## Screenshot and/or Video Walkthrough
 
