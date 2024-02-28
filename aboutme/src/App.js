@@ -37,6 +37,7 @@ function App() {
       <div class="center-align">
           <a href="https://github.com/ozwalf/Platform_Computing"><button class="buttonwidth">Github</button></a>
       </div>
+      <br/>
     </div>
   );
 }
