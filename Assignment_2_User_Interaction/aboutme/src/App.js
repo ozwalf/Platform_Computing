@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <h1>About Me</h1>
       <div class="center-align">
-          <a href="https://github.com/ozwalf/Platform_Computing"><button class="buttonwidth">Github</button></a>
+          <a href="https://github.com/ozwalf/Platform_Computing" target="_blank"><button class="buttonwidth">Github</button></a>
       </div>
       <br/>
 
@@ -35,7 +35,7 @@ function App() {
       </div>
       <br/>
       <div class="center-align">
-          <a href="https://github.com/ozwalf/Platform_Computing"><button class="buttonwidth">Github</button></a>
+          <a href="https://github.com/ozwalf/Platform_Computing" target="_blank"><button class="buttonwidth">Github</button></a>
       </div>
       <br/>
     </div>

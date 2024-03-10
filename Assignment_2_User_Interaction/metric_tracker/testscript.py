@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+import time
 
 # Starts session
 driver = webdriver.Chrome()
@@ -24,6 +25,8 @@ submit_button.click()
 # Requests information on elements
 message = driver.find_element(by=By.ID, value="message")
 text = message.text
+
+time.sleep(5)
 
 # Ends session
 driver.quit()
