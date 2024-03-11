@@ -2,6 +2,7 @@ import time
 import csv
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from time import strftime, localtime
 
 
 def main():
@@ -12,11 +13,11 @@ def main():
     driver.get("http://localhost:3000/")
 
     metrics = [
-        ['Metric', 'value']
+        ['Current Time', 'Metric', 'Value']
     ]
 
     title = driver.title
-    metrics.append(['Page Title', title])
+    metrics.append(['---', 'Page Title', title])
 
     # button clicks
     num_clicks = 0
@@ -30,21 +31,24 @@ def main():
     current_time = time.time()
     presence_time = current_time - start_time
 
+
     while (presence_time < 10): # presence_time < 50: # seconds
 
         current_time = time.time()
+        current_time_string = strftime('%Y-%m-%d %H:%M:%S', localtime(current_time))
+        print(current_time_string)
         # tracks presence time
         presence_time = current_time - start_time
         print(f"Presence time: {presence_time} seconds")
         # appends presence time per iteration
-        metrics.append(['Presence time', presence_time])
+        metrics.append([current_time_string, 'Presence time', presence_time])
         
         # Track scrolling
         scroll_height = driver.execute_script("return document.body.scrollHeight")  
         current_scroll = driver.execute_script("return window.pageYOffset")
         print(f"Scrolled {current_scroll}/{scroll_height} pixels")
         # appends scroll length per iteration
-        metrics.append(['Scroll length', f"{current_scroll}/{scroll_height}"])
+        metrics.append([current_time_string, 'Scroll length', f"{current_scroll}/{scroll_height}"])
         
         time.sleep(2) 
         
@@ -58,7 +62,7 @@ def main():
             
         print(f"Number of clicks: {num_clicks}")
         # appends total number of click after each iteration of the while loop
-        metrics.append(['Button clicks', num_clicks])
+        metrics.append([current_time_string, 'Button clicks', num_clicks])
 
     # appends final presence time after the loop
     # metrics.append(['Presence time', presence_time])

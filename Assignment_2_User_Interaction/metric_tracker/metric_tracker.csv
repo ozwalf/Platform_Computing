@@ -1,20 +1,20 @@
-Metric,value
-Page Title,React App
-Presence time,0.0
-Scroll length,0/985
-Button clicks,1
-Presence time,2.174133539199829
-Scroll length,89/985
-Button clicks,2
-Presence time,4.332460403442383
-Scroll length,89/985
-Button clicks,3
-Presence time,6.524638414382935
-Scroll length,89/985
-Button clicks,4
-Presence time,8.751837730407715
-Scroll length,89/985
-Button clicks,5
-Presence time,10.909886837005615
-Scroll length,89/985
-Button clicks,6
+Current Time,Metric,Value
+---,Page Title,React App
+2024-03-11 10:14:31,Presence time,0.0
+2024-03-11 10:14:31,Scroll length,0/985
+2024-03-11 10:14:31,Button clicks,1
+2024-03-11 10:14:33,Presence time,2.1456656455993652
+2024-03-11 10:14:33,Scroll length,0/985
+2024-03-11 10:14:33,Button clicks,2
+2024-03-11 10:14:35,Presence time,4.289727449417114
+2024-03-11 10:14:35,Scroll length,0/985
+2024-03-11 10:14:35,Button clicks,3
+2024-03-11 10:14:37,Presence time,6.403789043426514
+2024-03-11 10:14:37,Scroll length,0/985
+2024-03-11 10:14:37,Button clicks,4
+2024-03-11 10:14:39,Presence time,8.54671311378479
+2024-03-11 10:14:39,Scroll length,0/985
+2024-03-11 10:14:39,Button clicks,5
+2024-03-11 10:14:42,Presence time,10.709820985794067
+2024-03-11 10:14:42,Scroll length,0/985
+2024-03-11 10:14:42,Button clicks,6
