@@ -3,7 +3,7 @@ import csv
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from time import strftime, localtime
-import mysql.connector
+
 
 
 def main():
@@ -13,15 +13,9 @@ def main():
     # Navigate to your website 
     driver.get("http://localhost:3000/")
 
-    # Connects to database
-    db = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="Pascal_16",
-        database="metric_tracker"
-    )
+    
 
-    cursor = db.cursor()
+   
 
 
     metrics = [
@@ -76,27 +70,19 @@ def main():
         # appends total number of click after each iteration of the while loop
         # metrics.append([current_time_string, 'Button clicks', num_clicks])
 
-        # string query for mysql
-        add_metric = ("INSERT INTO aboutme (TIMESTAMP, PAGE_TITLE, PRESENCE_TIME, SCROLL_LENGTH, BUTTON_CLICKS) VALUES (%s, %s, %s, %s, %s)")
-        data_metric = (current_time_string, title, presence_time, f"{current_scroll}/{scroll_height}", num_clicks)
-        cursor.execute(add_metric, data_metric)
+       
 
         # code for csv
-        # metrics.append([current_time_string, title, presence_time, f"{current_scroll}/{scroll_height}", num_clicks])
+        metrics.append([current_time_string, title, presence_time, f"{current_scroll}/{scroll_height}", num_clicks])
 
-    # saves/commits changes made to database
-    db.commit()
-    # closes cursor
-    cursor.close()
-    # closes database connection 
-    db.close()
+    
 
         
     # writes data into csv file
-    # with open('metric_tracker.csv', 'w', newline='') as file:
-    #     writer = csv.writer(file)
-    #     writer.writerows(metrics) 
-    # print("Data recorded to metric_tracker.csv")
+    with open('metric_tracker.csv', 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerows(metrics) 
+    print("Data recorded to metric_tracker.csv")
 
     print("End of script.")
     driver.quit()
