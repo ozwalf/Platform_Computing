@@ -1,8 +1,8 @@
 # Metric Tracker with Database
 
-PROVIDE OVERVIEW OF ASSIGNMENT HERE
+Integration of database(mySQL) with the metric tracker
 
-Time spent: **NUMBER_HOURS_SPENT** hours spent in total
+Time spent: **5** hours spent in total
 
 ## Features
 
@@ -22,15 +22,21 @@ The following **bonus** features are implemented:
 
 ## Screenshot and/or Video Walkthrough
 
+SQL Tutorial
 <img src="Images/sqltutorialcomplete.png" title='SQL Tutorial' width='' alt='SQL Tutorial' />
+
+MongoDB
 <img src="Images/mongodbinteractive.png" title='MongoDB Tutorial' width='' alt='MongoDB Tutorial' />
+
+Database Setup
 <img src="Images/databasesetup.png" title='Database Setup' width='' alt='Database Setup' />
+
+Database w/ Data
 <img src="Images/mysqldata.png" title='Database w/ Data' width='' alt='Database w/ Data' />
 
 
 ## Notes:
 PROVIDE RELEVANT OR ADDITIONAL INFORMATION HERE. Below are formatting options to add emphasis in text
 <ul>
-  <li>**Example in bold**</li>
-  <li>*Example in italics*</li>
+  <li>Spent a embarassing amount of time trying to install mysql-python connector</li>
 </ul>
