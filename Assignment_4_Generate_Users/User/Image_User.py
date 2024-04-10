@@ -2,8 +2,7 @@ import time
 import csv
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from time import strftime, localtime
-import mysql.connector
+
 
 def countElem(driver, tag_name)->int:
     # find_element returns only 1 vlaue while find_elements returns a list of all the values

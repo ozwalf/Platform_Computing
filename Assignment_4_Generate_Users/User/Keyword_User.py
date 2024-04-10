@@ -2,8 +2,7 @@ import time
 import csv
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from time import strftime, localtime
-import mysql.connector
+
 
 def findKeyword(driver, keyword)->bool:
     # print(driver.page_souce.lower())

@@ -8,11 +8,11 @@ Time spent: **5** hours spent in total
 
 The following **required** features are completed:
 
-- [ ] Organize Github folders (2 pts)
-- [ ] Create a user with affinity towards keyword(s) and verify that it works (3 pts)
-- [ ] Create a user with affinity towards image(s) and verify that it works (3 pts)
-- [ ] Create a user with affinity towards links and verify that it works (3 pts)
-- [ ] Describe a user with unique affinities (1 pt)
+- [x] Organize Github folders (2 pts)
+- [x] Create a user with affinity towards keyword(s) and verify that it works (3 pts)
+- [x] Create a user with affinity towards image(s) and verify that it works (3 pts)
+- [x] Create a user with affinity towards links and verify that it works (3 pts)
+- [x] Describe a user with unique affinities (1 pt)
 - [ ] Create a user with unique affinities and verify that it works (3 pts)
 The following **bonus** features are implemented:
 
@@ -28,6 +28,5 @@ The following **bonus** features are implemented:
 ## Notes:
 PROVIDE RELEVANT OR ADDITIONAL INFORMATION HERE. Below are formatting options to add emphasis in text
 <ul>
-  <li>**Example in bold**</li>
-  <li>*Example in italics*</li>
+  <li>Unique User: Slow reader (1 second per word). Affinity towards keywords, links, and images.</li>
 </ul>

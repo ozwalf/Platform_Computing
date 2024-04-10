@@ -29,7 +29,7 @@ function App() {
           <div class="paragraph">
               <p>I like to play videogames. The styling of this page was heavily inspired by NieR: Automata's UI design.</p>
               <p>If you wish to learn more about the UI, here is an official blog post from the UI designer of NieR.</p>
-              <a href="https://www.platinumgames.com/official-blog/article/9624">  UI Design in NieR:Automata  </a>
+              <a href="https://www.platinumgames.com/official-blog/article/9624" target="_blank">  UI Design in NieR:Automata  </a>
           </div>  
           <br/>
       </div>

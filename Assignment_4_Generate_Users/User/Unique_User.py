@@ -19,17 +19,29 @@ def wordCount(driver):
         word_count += len(re.findall(r'\w+', paragraph.get_attribute('innerHTML')))
     return word_count
 
+def clickLink(driver):
+    links = driver.find_elements(By.TAG_NAME, "a")
+    clickCount = 0
+    for link in links:
+        # opens link and then waits 2 seconds then switches to new window and closes it
+        link.click()
+        clickCount += 1
+        time.sleep(2)
+        driver.switch_to.window(driver.window_handles[1])
+        driver.close()
+        driver.switch_to.window(driver.window_handles[0])
+    return clickCount
 
 def userAction(action, driver, reward_time, req_list)->float:
     total_reward_time = 0
     if action.upper() == "KEYWORD":
         for keyword in req_list:
             if findKeyword(driver, keyword):
-                print("Found", keyword)
+                print("Found: ", keyword)
                 total_reward_time += reward_time
                 time.sleep(reward_time)
             else:
-                print("Not found")
+                print("Not found: ", keyword)
     elif action.upper() == "IMAGES":
         for tag in req_list:
             num_images = countElem(driver, tag)
@@ -39,14 +51,13 @@ def userAction(action, driver, reward_time, req_list)->float:
         num_word = wordCount(driver)
         total_reward_time += reward_time * num_word
         time.sleep(total_reward_time)
+    elif action.upper() == "LINK":
+        num_link = clickLink(driver)
+        total_reward_time += reward_time * num_link
     
     return total_reward_time
 
-def clickLink(driver, href):
-    links = driver.find_elements(By.TAG_NAME, "a")
 
-    for link in links:
-        link.click()
 
 def main():
     # Initialize browser
@@ -57,18 +68,20 @@ def main():
 
     reward_time = 10
     reward_per_word = 1
+    reward_per_link = 3
 
     keywords = ["student", "mochi"]
     tags = ["img"]
 
-    # total_reward_time = userAction("KEYWORD", driver, reward_time, keywords)
-    # total_reward_time = userAction("IMAGES", driver, reward_time, tags)
-    total_reward_time = userAction("READER", driver, reward_per_word, "")
+    total_reward_time = userAction("KEYWORD", driver, reward_time, keywords)
+    total_reward_time += userAction("IMAGES", driver, reward_time, tags)
+    total_reward_time += userAction("READER", driver, reward_per_word, "")
+    total_reward_time += userAction("LINK", driver, reward_per_link, "")
 
-    # clickLink(driver)    
+      
 
     driver.quit()
-    print("Presence Time:", total_reward_time)
+    print("Presence Time:", total_reward_time, " seconds.")
 
 if __name__ == "__main__":
     main()
