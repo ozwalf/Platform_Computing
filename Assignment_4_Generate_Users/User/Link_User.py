@@ -61,7 +61,7 @@ def main():
 
     total_reward_time = userAction("KEYWORD", driver, reward_time, keywords)
     total_reward_time += userAction("IMAGES", driver, reward_time, tags)
-    total_reward_time += userAction("LINK", driver, reward_per_link, "")
+    # total_reward_time += userAction("LINK", driver, reward_per_link, "")
     # clickLink(driver)    
 
     driver.quit()

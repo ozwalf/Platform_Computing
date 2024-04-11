@@ -65,6 +65,8 @@ def main():
     
     # Navigate to website
     driver.get("http://localhost:3000/")
+    # http://localhost:3000/
+    # https://murphy.academic.csusb.edu/cse4310/
 
     reward_time = 10
     reward_per_word = 1
